@@ -1,0 +1,19 @@
+/*
+Theme Name: Ask Me Child
+Theme URI: http://themeforest.net/user/vbegy
+Description: Responsive Questions and Answers WordPress
+Tags: answers, css3, html5, icons, jquery, q & a, questions, responsive, retina ready, slider, theme-options
+Author: vbegy
+Author URI: http://themeforest.net/user/vbegy
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Template: ask-me
+*/
+
+@import url("../ask-me/style.css");
+
+.header-search {
+	float: right;
+	position: relative;
+}

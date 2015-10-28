@@ -1,0 +1,103 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Wolf Twitter\n"
+"POT-Creation-Date: 2013-07-28 16:17+0100\n"
+"PO-Revision-Date: 2014-07-22 13:22+0100\n"
+"Last-Translator: Gigi Pastore <gigi@la-fabbrica.org>\n"
+"Language-Team: wpwolf.com <support@wpwolf.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.6\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"Language: it_IT\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../update.php:59
+#, php-format
+msgid "There is a new version of %s plugin available."
+msgstr "&Egrave; disponibile una nuova versione del plugin %s."
+
+#: ../update.php:60
+#, php-format
+msgid "You have version %s installed."
+msgstr "Hai installato la versione %s."
+
+#: ../update.php:62
+#, php-format
+msgid "Update to version %s"
+msgstr "Aggiorna alla versione %s."
+
+#: ../update.php:129
+msgid "Hide permanently"
+msgstr "Nascondi definitivamente."
+
+#: ../wolf-twitter-widget.php:26
+msgid "Display your latest tweets"
+msgstr "Visualizza i tuoi ultimi tweet"
+
+#: ../wolf-twitter-widget.php:74
+msgid "Twitter Feed"
+msgstr "Feed Twitter"
+
+#: ../wolf-twitter-widget.php:79
+msgid "Title"
+msgstr "Titolo"
+
+#: ../wolf-twitter-widget.php:83
+msgid "Your Twitter username"
+msgstr "Il tuo username di Twitter"
+
+#: ../wolf-twitter-widget.php:87
+msgid "Number of tweets"
+msgstr "Numero di tweet"
+
+#: ../wolf-twitter.php:72
+#, php-format
+msgid ""
+"Our Twitter feed is currently unavailable but you can visit our official "
+"twitter page  <a href=\"%1s\" target=\"_blank\">%2s</a>."
+msgstr ""
+"Il feed Twitter non &egrave; al momento disponibile ma puoi visitare la "
+"nostra pagina ufficiale twitter <a href=\"%1s\" target=\"_blank\">%2s</a>."
+
+#: ../wolf-twitter.php:155 ../wolf-twitter.php:174
+msgid "about"
+msgstr "circa"
+
+#: ../wolf-twitter.php:222
+msgid "second"
+msgstr "secondo"
+
+#: ../wolf-twitter.php:222
+msgid "minute"
+msgstr "minuto"
+
+#: ../wolf-twitter.php:222
+msgid "hour"
+msgstr "ora"
+
+#: ../wolf-twitter.php:222
+msgid "day"
+msgstr "giorno"
+
+#: ../wolf-twitter.php:222
+msgid "week"
+msgstr "settimana"
+
+#: ../wolf-twitter.php:222
+msgid "month"
+msgstr "mese"
+
+#: ../wolf-twitter.php:222
+msgid "year"
+msgstr "anno"
+
+#: ../wolf-twitter.php:222
+msgid "decade"
+msgstr "decade"
+
+#: ../wolf-twitter.php:227
+msgid "ago"
+msgstr "fa"

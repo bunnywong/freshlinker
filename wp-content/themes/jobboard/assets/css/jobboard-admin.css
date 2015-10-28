@@ -1,0 +1,8 @@
+#jobboard_company_mb_services_metabox,
+#jobboard_company_mb_expertise_metabox,
+#jobboard_company_mb_clients_metabox,
+#jobboard_company_mb_portfolio_metabox,
+#jobboard_company_mb_testimonial_metabox,
+#jobboard_company_mb_address_metabox {
+  display: none;
+  visibility: hidden; }

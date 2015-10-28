@@ -1,0 +1,136 @@
+/*
+Theme Name: Bridge Child
+Theme URI: http://demo.qodeinteractive.com/bridge/
+Description: A child theme of Bridge Theme
+Author: Qode Interactive
+Author URI: http://www.qodethemes.com/
+Version: 1.0.0
+Template: bridge
+*/
+@import url("../bridge/style.css");
+
+.user_menu {
+    background-color: #1abc9c;
+}
+.user_menu > a {
+    color: #fff;
+}
+.user_menu .dropdown-menu {
+    background: #1abc9c none repeat scroll 0 0;
+    border: medium none;
+    padding: 10px;
+    right: 0;
+    z-index: 1;
+}
+.dropdown-menu {
+    background-clip: padding-box;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+    display: none;
+    float: left;
+    font-size: 14px;
+    left: 0;
+    list-style: outside none none;
+    margin: 2px 0 0;
+    min-width: 160px;
+    padding: 5px 0;
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    z-index: 1000;
+}
+.open > .dropdown-menu {
+    display: block;
+}
+.user_menu > a > img {
+    border-top-left-radius: 5px;
+    left: 0;
+    line-height: normal;
+    margin: 0 25px 0 0;
+    position: absolute;
+    top: 0;
+}
+.dropdown {
+    position: relative;
+}
+.user_menu {
+    background: #1abc9c none repeat scroll 0 0;
+    border-radius: 5px;
+    display: inline-block;
+    height: 35px;
+    margin-top: 3px;
+    min-width: 195px;
+    text-align: left;
+    z-index: 2;
+}
+.user_menu > a {
+    display: block;
+    height: 35px;
+    position: relative;
+}
+.user_menu > a > img {
+    border-top-left-radius: 5px;
+    left: 0;
+    line-height: normal;
+    margin: 0 25px 0 0;
+    position: absolute;
+    top: 0;
+}
+.user_menu > span {
+    color: #ffffff;
+}
+.user_menu > a {
+    color: #ffffff;
+    padding: 3px 15px 0 45px;
+    text-align: left;
+}
+.user_menu > a:hover {
+    color: initial;
+    text-decoration: none !important;
+}
+.user_menu > a .fa {
+    margin-left: 10px;
+}
+.btn {
+    -moz-user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857;
+    margin-bottom: 0;
+    padding: 6px 12px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.jobboard-login-register .btn {
+    background: #cccccc none repeat scroll 0 0;
+    color: #ffffff;
+    font-weight: 300;
+    margin-left: 3px;
+    margin-top: 4px;
+}
+.jobboard-login-register .btn-header-register {
+    background: #1abc9c none repeat scroll 0 0;
+}
+.jobboard-login-register .btn-header-login {
+    background: #ef4c39 none repeat scroll 0 0;
+}
+@media screen and (max-width: 320px) {
+   .header_top .left{display:none}
+   .header-widget .jobboard-social-media {
+		margin: 6px 0 0 0;
+	}
+}
+@media screen and (max-width: 480px) {
+	.header_top .container_inner{width:96%}
+	.user_menu {
+		min-width: 176px;
+	}
+}

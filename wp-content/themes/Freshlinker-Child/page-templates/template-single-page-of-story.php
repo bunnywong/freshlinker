@@ -3,32 +3,83 @@
 /**
  * Template Name: Single Page Story
  *
- * Structure:
- * 1 - [ ] Opening page
- * 2 - [ ] Introduction 宗旨
- * 3 - [ ] About Project LEAD 簡介
- * 4 - [ ] What is Project LEAD and who is it for? 為您打造的Project LEAD
- * 5 - [ ] Features of the Project 特色
- * 6 - [ ] Recollections of Past Participants 過往參加者反饋
- * 7 - [ ] Quick Facts about the Project 數據速覽
- * 7 - [ ] Next Project LEAD
- * 8 - [ ] Register form
  */
-
 ?>
- <?php if(have_posts()) :?>
-    <div class="post">
-        <div class="entry">
-          <?php
-            $custom_filed_qty = 8;
-            for ($i=0; $i<=$custom_filed_qty; $i++) {
-              // the_field('custom_title_' . $i);
-              // the_field('custom_content_' . $i);
-            }
-          ?>
-        <?php the_field('custom_title_1'); ?>
-        <?php the_field('custom_content_1'); ?>
 
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,"") + " js";</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="<?= get_site_url(); ?>/wp-content/themes/Freshlinker-Child/inc/css/single-page-story.css">
+  <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48 64x64">
+  <link rel="icon" href="favicon.png" sizes="192x192">
+</head>
+<body>
+    <?php
+      while( have_posts() ){
+        the_post();
+        // the_content();
+      }//endwhile;
+    ?>
+<div id="js-main" class="main">
+<a href="http://f.freshlinker.com/" class="header-logo" title="Freshlinker">
+            <img src="http://f.freshlinker.com/wp-content/uploads/2015/07/FreshLinker_logo-42.png" alt="Freshlinker"></a>
+  <div class="flexbox-fix-for-ie">
+    <header class="section-intro vertical-center">
+      <div class="container">
+        <h1 class="headline" data-sr>
+          <strong><?php wp_title( '-', true, 'right' ); ?></strong>
+        </h1>
+        <nav id="js-nav" class="mainnav" data-sr="wait .25s">
+          <ul>
+            <?php
+              $custom_filed_qty = 7;
+              for ($i=1; $i<=$custom_filed_qty; $i++) {
+                echo '<li><a href="#' . sanitize_title(get_field('custom_title_' . $i)). '">';
+                the_field('custom_title_' . $i);
+                echo '</a></li>';
+              }
+            ?>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
+
+  <?php for($i=1; $i<=$custom_filed_qty; $i++): ?>
+    <?php
+      if ($i%2==0)
+        $style = 'bglight';
+      else
+        $style = 'bgdark';
+    ?>
+    <section id="<?= sanitize_title(get_field('custom_title_' . $i)); ?>" class="section-about <?= $style ?>">
+      <div class="container">
+        <h1 class="headline" data-sr="vFactor 1">
+          <?php echo the_field('custom_title_' . $i); ?>
+        </h1>
+        <div class="text">
+          <?php echo the_field('custom_content_' . $i); ?>
         </div>
-    </div>
-<?php endif; ?>
+      </div>
+    </section>
+  <?php endfor; ?>
+
+  <section id="connect" class="section-connect">
+    <div class="container">
+      <h1 class="headline">Register form</h1>
+      <?php
+          if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 1 ); }
+        ?>
+      </div>
+  </section>
+</div>
+
+  <script src="<?= get_site_url(); ?>/wp-content/themes/Freshlinker-Child/inc/js/single-page-story.js" async></script>
+
+</body>
+</html>
+

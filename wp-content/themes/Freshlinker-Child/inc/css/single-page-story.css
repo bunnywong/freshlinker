@@ -18,6 +18,7 @@ b, strong { font-weight: bold; }
   font-family: "Clavo";
   src: url("fonts/clavo-light.woff2") format("woff2"),
        url("fonts/clavo-light.woff") format("woff");
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: normal;
   font-style: normal;
 }
@@ -26,6 +27,7 @@ b, strong { font-weight: bold; }
   font-family: "Clavo";
   src: url("fonts/clavo-light-italic.woff2") format("woff2"),
        url("fonts/clavo-light-italic.woff") format("woff");
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: normal;
   font-style: italic;
 }
@@ -34,6 +36,7 @@ b, strong { font-weight: bold; }
   font-family: "Clavo";
   src: url("fonts/clavo-medium.woff2") format("woff2"),
        url("fonts/clavo-medium.woff") format("woff");
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: bold;
   font-style: normal;
 }
@@ -42,6 +45,7 @@ b, strong { font-weight: bold; }
   font-family: "Clavo";
   src: url("fonts/clavo-medium-italic.woff2") format("woff2"),
        url("fonts/clavo-medium-italic.woff") format("woff");
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: bold;
   font-style: italic;
 }
@@ -50,6 +54,7 @@ b, strong { font-weight: bold; }
   font-family: "Pluto";
   src: url("fonts/pluto-medium.woff2") format("woff2"),
        url("fonts/pluto-medium.woff") format("woff");
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: bold;
   font-style: normal;
 }
@@ -733,6 +738,9 @@ h1 > img {
  * ================================================================================
  */
 
+html {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
 h1, h2 {
   font-size: 3rem;
 }
@@ -755,6 +763,9 @@ header > div.container::after {
 }
 header .container {
   /*padding-bottom: 0px;*/
+}
+.mainnav li {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 .bgdark {
   background-image: linear-gradient(to bottom, #3987c9, #669);

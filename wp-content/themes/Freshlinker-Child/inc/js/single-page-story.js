@@ -162,22 +162,20 @@ Zepto(function($){
 
   /* open/close lightbox on hashchange */
   $(window).on("hashchange", function(){
-
     var currentHash = location.hash.substring(2),
       project_id = currentHash.substring(currentHash.lastIndexOf("/") + 1, currentHash.length);
 
     (currentHash && $(".js-project-id." + project_id).length) ? lightbox_open(project_id) : is_lightbox_opened && lightbox_close();
-
-    ga("send", "pageview", {"page": location.pathname + location.search  + currentHash});
-
   }).trigger("hashchange");
 
-
-
-  /* google analytics event tracking */
-  $("[data-ga-event]").on("click", function(){
-    ga("send", "event", "External links", "click", $(this).attr("href"));
-  });
+  /* Translate for tranditation Chinese. */
+  if (currentLang === 'zh-hant') {
+    $(".js-connect h1").text('註冊');
+    $(".js-connect #ninja_forms_field_1_label").text('名字');
+    $(".js-connect #ninja_forms_field_2_label").text('電郵');
+    $(".js-connect #ninja_forms_field_5").val('寄出');
+    $(".js-connect #ninja_forms_form_1_response_msg").text('(你的註冊表格已經成功寄出)');
+  }
 
   /* init scrollReveal.js if window is scrolled to top and font is loaded */
   if (!is_lightbox_opened && $(window).scrollTop() < 160 && scrollReveal.prototype.isSupported() && !scrollReveal.prototype.isMobile()) {
@@ -203,7 +201,4 @@ Zepto(function($){
   else {
     $("[data-sr]").css("visibility", "visible");
   }
-
-
-
 });

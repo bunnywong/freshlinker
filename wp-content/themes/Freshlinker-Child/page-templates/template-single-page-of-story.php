@@ -88,11 +88,15 @@
   </section>
 </div>
 
+  <script>
+    var currentLang = '<? echo ICL_LANGUAGE_CODE; ?>';
+  </script>
   <script src="<?= get_site_url(); ?>/wp-content/themes/Freshlinker-Child/inc/js/single-page-story.js" async></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
   <script>
     new WOW().init();
   </script>
+
 </body>
 </html>
 

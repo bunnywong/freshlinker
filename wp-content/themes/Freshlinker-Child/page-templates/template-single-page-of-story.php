@@ -27,6 +27,7 @@
 
       /* Ref
         https://daneden.github.io/animate.css/
+        http://mynameismatthieu.com/WOW/docs.html
       */
     ?>
 <div id="js-main" class="main">
@@ -77,7 +78,7 @@
     </section>
   <?php endfor; ?>
 
-  <section id="connect" class="section-connect wow bounceInUp center animated">
+  <section id="connect" class="section-connect wow bounceInUp center animated js-connect">
     <div class="container">
       <h1 class="headline">Register form</h1>
       <?php

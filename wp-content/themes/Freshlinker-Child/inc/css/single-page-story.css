@@ -100,6 +100,9 @@ h2 {
   line-height: 1.25;
   margin: 0;
 }
+h3 {
+  margin-top: 50px;
+}
 
 p {
   margin-bottom: 1.25rem;
@@ -830,8 +833,49 @@ div.features img {
   max-width: 100%;
 }
 
+.company-logo-container {
+  display: inline-block;
+}
+.company-logo-wrapper {
+  margin: 10px;
+  width: 70px;
+  height: 70px;
+  float: left;
+}
 
+div.qr-main-container {
+  display: inline-block;
+}
+div.qr-container {
+  display: inline-block;
+  float: left;
+  margin: 5px;
+}
+div.qr-wrapper {
+  min-height: 70px;
+  float: left;
+  font-size: 12px;
+  margin: 10px;
+}
+div.qr-container img {
+  margin: 0px auto 0px auto;
+  display: block;
+}
+h4.orange {
+  margin: 10px 0px;
+  color: orange;
+  font-size: 20px;
+}
 
+/* Mobile */
+@media screen and (max-width: 767px) {
+  div.qr-container {
+    min-width: 150px;
+  }
+  div.qr-container:nth-child(odd) {
+    clear: left;
+  }
+}
 
 
 

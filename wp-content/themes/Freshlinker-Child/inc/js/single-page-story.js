@@ -170,14 +170,20 @@ Zepto(function($){
 
   // Translate for tranditation Chinese
   if (currentLang === 'zh-hant') {
+    $('.ninja-forms-all-fields-wrap').addClass('zh');
     $(".js-connect h1").text('註冊');
     $(".js-connect #ninja_forms_field_1_label").text('名字');
+    $(".js-connect #ninja_forms_field_6_label").text('電話');
     $(".js-connect #ninja_forms_field_2_label").text('電郵');
     $(".js-connect #ninja_forms_field_5").val('寄出');
 
     if ($.trim($(".js-connect #ninja_forms_form_1_response_msg").text()) == 'Your form has been successfully submitted.') {
       $(".js-connect #ninja_forms_form_1_response_msg").text('(你的註冊表格已經成功寄出)');
     }
+  }
+  else {
+    // For style use
+    $('.ninja-forms-all-fields-wrap').addClass('en');
   }
 
   // Scroll to contact form

@@ -168,16 +168,17 @@ Zepto(function($){
     (currentHash && $(".js-project-id." + project_id).length) ? lightbox_open(project_id) : is_lightbox_opened && lightbox_close();
   }).trigger("hashchange");
 
+
+  $('h2.main-sub-title').on('click', function() {
+    $('#js-nav ul > li:last-child a').trigger('click');
+  });
   // Translate for tranditation Chinese
   if (currentLang === 'zh-hant') {
-    // @Hardcode sub title
-    $('h1 span').html('5日高強度職場訓練計劃');
+    // Translate sub title
+    $('h1 span').text('5日高強度職場訓練計劃');
 
-    // Last menu
-    $('<h2 class="main-sub-title">春季計劃火熱報名中 !</h2>').insertBefore('#js-nav');
-    $('h2.main-sub-title').on('click', function() {
-      $('#js-nav ul > li:last-child a').trigger('click');
-    });
+    // Translate last menu
+    $('h2.main-sub-title').text('春季計劃火熱報名中 !');
 
     // Ninja Form
     $('.ninja-forms-all-fields-wrap').addClass('zh');

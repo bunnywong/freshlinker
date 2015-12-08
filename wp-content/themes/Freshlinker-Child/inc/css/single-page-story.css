@@ -154,7 +154,7 @@ h1 > img {
   max-width: 500px;
 }
 #js-nav ul > li:last-child {
-  /*display: none;*/
+  display: none;
 }
 .subheader {
   font-size: 1.125rem;
@@ -772,7 +772,7 @@ header {
 }
 header > div.container::after {
   content: "";
-  background: url(http://www.strippedpixel.com/wp-content/uploads/2014/09/Hong-Kong-night-view-from-victoria-peak.jpg);
+  background: url(/wp-content/uploads/2015/12/Hong-Kong-night-view-from-victoria-peak.jpg);
   background-size: cover;
   background-color: black;
   opacity: 0.3;
@@ -843,10 +843,13 @@ div.features img {
   max-width: 100%;
 }
 
-.company-logo-container {
-  display: inline-block;
-}
 .company-logo-wrapper {
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+  left: 50px;
+}
+.company-logo-wrapper img {
   margin: 10px;
   width: 70px;
   height: 70px;

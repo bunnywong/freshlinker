@@ -19,27 +19,18 @@
   <link rel="icon" href="favicon.png" sizes="192x192">
 </head>
 <body>
-    <?php
-      // while( have_posts() ){
-      //   // the_post();
-      //   // the_content();
-      // }//endwhile;
-
-      /* Ref
-        https://daneden.github.io/animate.css/
-        http://mynameismatthieu.com/WOW/docs.html
-      */
-    ?>
 <div id="js-main" class="main">
-<!-- <a href="http://f.freshlinker.com/" class="header-logo" title="Freshlinker">
-            <img src="http://f.freshlinker.com/wp-content/uploads/2015/07/FreshLinker_logo-42.png" alt="Freshlinker"></a> -->
+<a href="http://f.freshlinker.com/" class="header-logo" title="Freshlinker">
+  <div class="company-logo-wrapper">
+    <img src="/wp-content/uploads/2015/12/fresh-logo.png"></a>
+  </div>
   <div class="flexbox-fix-for-ie">
     <header class="section-intro vertical-center">
       <div class="container">
         <h1 class="headline animated slideInDown wow">
-          <!-- <strong><?php wp_title( '-', true, 'right' ); ?></strong> -->
           <strong>Freshlinker<br><span>Project LEAD. 5-day HIGH DENSITY CAREER TRAINING CAMP</span></strong>
         </h1>
+        <h2 class="main-sub-title">Register Now !</h2>
         <nav id="js-nav" class="mainnav animated slideInUp">
           <ul>
             <?php
@@ -91,9 +82,10 @@
 
   <script>
     var currentLang = '<? echo ICL_LANGUAGE_CODE; ?>';
+    // var currentLang = 'zh-hant'; // @hardcode: Enable this line for Chinese content in English condition
   </script>
   <script src="<?= get_site_url(); ?>/wp-content/themes/Freshlinker-Child/inc/js/single-page-story.js" async></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
   <script>
     new WOW().init();
   </script>

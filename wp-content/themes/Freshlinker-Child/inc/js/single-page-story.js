@@ -171,11 +171,12 @@ Zepto(function($){
   // Translate for tranditation Chinese
   if (currentLang === 'zh-hant') {
     $('.ninja-forms-all-fields-wrap').addClass('zh');
-    $(".js-connect h1").text('註冊');
-    $(".js-connect #ninja_forms_field_1_label").text('名字');
-    $(".js-connect #ninja_forms_field_6_label").text('電話');
-    $(".js-connect #ninja_forms_field_2_label").text('電郵');
-    $(".js-connect #ninja_forms_field_5").val('寄出');
+    $(".js-connect h1").text('報名');
+    $selector = $(".js-connect .ninja-forms-all-fields-wrap > .field-wrap");
+      $selector.eq(0).children('label').text('名字');
+      $selector.eq(1).children('label').text('電話');
+      $selector.eq(2).children('label').text('電郵');
+      $selector.eq(3).children('div').children('input').val('寄出');
 
     if ($.trim($(".js-connect #ninja_forms_form_1_response_msg").text()) == 'Your form has been successfully submitted.') {
       $(".js-connect #ninja_forms_form_1_response_msg").text('(你的註冊表格已經成功寄出)');

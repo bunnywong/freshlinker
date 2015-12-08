@@ -37,7 +37,8 @@
     <header class="section-intro vertical-center">
       <div class="container">
         <h1 class="headline animated slideInDown wow">
-          <strong><?php wp_title( '-', true, 'right' ); ?></strong>
+          <!-- <strong><?php wp_title( '-', true, 'right' ); ?></strong> -->
+          <strong>Freshlinker<br><span>Project LEAD. 5-day HIGH DENSITY CAREER TRAINING CAMP</span></strong>
         </h1>
         <nav id="js-nav" class="mainnav animated slideInUp">
           <ul>

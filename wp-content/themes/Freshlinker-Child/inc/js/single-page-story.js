@@ -170,6 +170,16 @@ Zepto(function($){
 
   // Translate for tranditation Chinese
   if (currentLang === 'zh-hant') {
+    // @Hardcode sub title
+    $('h1 span').html('5日高強度職場訓練計劃');
+
+    // Last menu
+    $('<h2 class="main-sub-title">春季計劃火熱報名中 !</h2>').insertBefore('#js-nav');
+    $('h2.main-sub-title').on('click', function() {
+      $('#js-nav ul > li:last-child a').trigger('click');
+    });
+
+    // Ninja Form
     $('.ninja-forms-all-fields-wrap').addClass('zh');
     $(".js-connect h1").text('報名');
     $selector = $(".js-connect .ninja-forms-all-fields-wrap > .field-wrap");

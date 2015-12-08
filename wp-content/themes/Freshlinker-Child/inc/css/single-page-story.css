@@ -760,6 +760,20 @@ h1, h2 {
 header {
   background-color: transparent;
 }
+.my-logo-wrapper {
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+  left: 50px;
+}
+
+.my-logo-wrapper img {
+  margin: 10px;
+  width: 70px;
+  height: 70px;
+  float: left;
+}
+
 .photo-round {
   overflow: hidden;
   border-radius: 170px;
@@ -843,13 +857,10 @@ div.features img {
   max-width: 100%;
 }
 
-.company-logo-wrapper {
+.company-logo-container {
   display: inline-block;
-  position: absolute;
-  top: 20px;
-  left: 50px;
 }
-.company-logo-wrapper img {
+.company-logo-wrapper {
   margin: 10px;
   width: 70px;
   height: 70px;

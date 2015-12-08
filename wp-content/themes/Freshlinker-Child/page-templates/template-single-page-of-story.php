@@ -21,7 +21,7 @@
 <body>
 <div id="js-main" class="main">
 <a href="http://f.freshlinker.com/" class="header-logo" title="Freshlinker">
-  <div class="company-logo-wrapper">
+  <div class="my-logo-wrapper">
     <img src="/wp-content/uploads/2015/12/fresh-logo.png"></a>
   </div>
   <div class="flexbox-fix-for-ie">

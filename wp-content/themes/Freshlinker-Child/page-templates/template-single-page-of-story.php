@@ -13,7 +13,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
-  <link rel="stylesheet" href="<?= get_site_url(); ?>/wp-content/themes/Freshlinker-Child/inc/css/single-page-story.css">
+  <link rel="stylesheet" href="<?= get_site_url(); ?>/wp-content/themes/Freshlinker-Child/inc/css/single-page-story.css?<?php echo time(); ?>">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
   <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48 64x64">
   <link rel="icon" href="favicon.png" sizes="192x192">
@@ -21,7 +21,7 @@
 <body>
 <div id="js-main" class="main">
   <div class="my-logo-wrapper">
-    <a href="/" class="header-logo" title="Freshlinker">
+    <a href="<?php echo get_option('home'); ?>" class="header-logo" title="Freshlinker">
       <img src="/wp-content/uploads/2015/12/fresh-logo.png"></a>
     </a>
   </div>
@@ -33,7 +33,7 @@
       if (1 < count($languages)) {
         foreach ($languages as $l) {
           if (!$l['active']) {
-            echo '<a href="'. $l['url'] .'">'. $l['native_name'] . '</a>';
+            echo '<a href="http://'. $l['url'] .'">'. $l['native_name'] . '</a>';
           }
         }
       }
@@ -90,7 +90,11 @@
     <div class="container">
       <h1 class="headline">Register form</h1>
       <?php
-          if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 1 ); }
+          if( function_exists( 'ninja_forms_display_form' ) ){
+            // Contact form for Development / Production
+            $_SERVER["HTTP_HOST"] === 'f.freshlinker.com' ? $from_id = 1 : $from_id = 5;
+            ninja_forms_display_form($from_id);
+          }
         ?>
       </div>
   </section>

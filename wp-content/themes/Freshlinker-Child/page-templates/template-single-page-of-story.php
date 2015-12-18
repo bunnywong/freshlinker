@@ -20,15 +20,31 @@
 </head>
 <body>
 <div id="js-main" class="main">
-<a href="http://f.freshlinker.com/" class="header-logo" title="Freshlinker">
   <div class="my-logo-wrapper">
-    <img src="/wp-content/uploads/2015/12/fresh-logo.png"></a>
+    <a href="/" class="header-logo" title="Freshlinker">
+      <img src="/wp-content/uploads/2015/12/fresh-logo.png"></a>
+    </a>
+  </div>
+  <div class="lang-wrapper">
+    <span>
+    <?php
+      // Show opposite language
+      $languages = icl_get_languages('skip_missing=0');
+      if (1 < count($languages)) {
+        foreach ($languages as $l) {
+          if (!$l['active']) {
+            echo '<a href="'. $l['url'] .'">'. $l['native_name'] . '</a>';
+          }
+        }
+      }
+    ?>
+    </span>
   </div>
   <div class="flexbox-fix-for-ie">
     <header class="section-intro vertical-center">
       <div class="container">
         <h1 class="headline animated slideInDown wow">
-          <strong>Freshlinker<br><span>Project LEAD. 5-day HIGH DENSITY CAREER TRAINING CAMP</span></strong>
+          <strong>FreshLinker<br><span>Project LEAD. 5-day HIGH DENSITY CAREER TRAINING CAMP</span></strong>
         </h1>
         <h2 class="main-sub-title">Register Now !</h2>
         <nav id="js-nav" class="mainnav animated slideInUp">
@@ -82,7 +98,6 @@
 
   <script>
     var currentLang = '<? echo ICL_LANGUAGE_CODE; ?>';
-    // var currentLang = 'zh-hant'; // @hardcode: Enable this line for Chinese content in English condition
   </script>
   <script src="<?= get_site_url(); ?>/wp-content/themes/Freshlinker-Child/inc/js/single-page-story.js" async></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>

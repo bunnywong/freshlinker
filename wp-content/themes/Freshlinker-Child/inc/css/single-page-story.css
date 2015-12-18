@@ -760,17 +760,29 @@ h1, h2 {
 header {
   background-color: transparent;
 }
+header .container {
+  z-index: -1;
+}
 .my-logo-wrapper {
   display: inline-block;
   position: absolute;
   top: 20px;
   left: 50px;
+  z-index: 999;
+}
+.lang-wrapper {
+  display: inline-block;
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  font-size: 16px;
+  z-index: 999;
 }
 
 .my-logo-wrapper img {
   margin: 10px;
   width: 70px;
-  height: 70px;
+  height: auto;
   float: left;
 }
 
@@ -780,6 +792,7 @@ header {
   height: 170px;
   width: 170px;
 }
+
 .custom-eric.photo-round > img {
   position: relative;
   top: -50px;

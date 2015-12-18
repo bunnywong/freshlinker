@@ -175,7 +175,7 @@ Zepto(function($){
   // Translate for tranditation Chinese
   if (currentLang === 'zh-hant') {
     // Translate sub title
-    $('h1 span').text('5日高強度職場訓練計劃');
+    $('h1 span').text('5 日高強度職場訓練計劃');
 
     // Translate last menu
     $('h2.main-sub-title').text('春季計劃火熱報名中 !');

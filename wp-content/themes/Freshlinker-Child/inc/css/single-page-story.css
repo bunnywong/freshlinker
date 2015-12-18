@@ -230,11 +230,12 @@ h1 > img {
 }
 
 .bgdark {
-  background-image: linear-gradient(to right, #5b4f6a, #54606a);
+  /*background-image: linear-gradient(to right, #3987c9, #0998a6);*/
+  background-image: linear-gradient(to right, rgba(57, 135, 201, .75), rgba(9, 152, 166, .75));
 }
-
 .bglight {
   background-color: #eeebf0;
+  /*background-color: rgba(238, 235, 240, .8);*/
   color: #222;
 }
 
@@ -816,10 +817,6 @@ header .container {
 }
 .mainnav li {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-}
-.bgdark {
-  background-image: linear-gradient(to bottom, #3987c9, #669);
-  background-image: linear-gradient(to right, #3987c9, #0998a6);
 }
 
 .section-connect {

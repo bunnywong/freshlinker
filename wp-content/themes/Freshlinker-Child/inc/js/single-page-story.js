@@ -169,11 +169,23 @@ Zepto(function($){
   }).trigger("hashchange");
 
 
+  // Link up Title
   $('h2.main-sub-title').on('click', function() {
     $('#js-nav ul > li:last-child a').trigger('click');
   });
+
+  // Set language (dirty script: Porpose for Chinese in English Page)
+  if ($('#js-nav > ul > li:nth-child(1) > a').text().match(/[a-z]/i)) {
+    var currentLang = 'en';
+  }
+  else {
+    // Not english.
+    var currentLang = 'zh-hant';
+  }
   // Translate for tranditation Chinese
   if (currentLang === 'zh-hant') {
+    // Overwrite lang selector
+    $('.js-lang').attr('href', '/lead-eng').text('English');
     // Translate sub title
     $('h1 span').text('5 日高強度職場訓練計劃');
 
@@ -194,6 +206,7 @@ Zepto(function($){
     }
   }
   else {
+    $('.js-lang').attr('href', '/lead').text('正體中文');
     // For style use
     $('.ninja-forms-all-fields-wrap').addClass('en');
   }

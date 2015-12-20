@@ -18,27 +18,16 @@
   <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48 64x64">
   <link rel="icon" href="favicon.png" sizes="192x192">
 </head>
+
 <body>
 <div id="js-main" class="main">
   <div class="my-logo-wrapper">
-    <a href="<?php echo get_option('home'); ?>" class="header-logo" title="Freshlinker">
+    <a href="http://<?php echo get_option('home'); ?>" class="header-logo" title="Freshlinker">
       <img src="/wp-content/uploads/2015/12/fresh-logo.png"></a>
     </a>
   </div>
   <div class="lang-wrapper">
-    <span>
-    <?php
-      // Show opposite language
-      $languages = icl_get_languages('skip_missing=0');
-      if (1 < count($languages)) {
-        foreach ($languages as $l) {
-          if (!$l['active']) {
-            echo '<a href="http://'. $l['url'] .'">'. $l['native_name'] . '</a>';
-          }
-        }
-      }
-    ?>
-    </span>
+    <span><a href="/lead" class="js-lang">正體中文</a></span>
   </div>
   <div class="flexbox-fix-for-ie">
     <header class="section-intro vertical-center">
@@ -100,10 +89,7 @@
   </section>
 </div>
 
-  <script>
-    var currentLang = '<? echo ICL_LANGUAGE_CODE; ?>';
-  </script>
-  <script src="<?= get_site_url(); ?>/wp-content/themes/Freshlinker-Child/inc/js/single-page-story.js" async></script>
+  <script src="<?= get_site_url(); ?>/wp-content/themes/Freshlinker-Child/inc/js/single-page-story.js?<?php echo time(); ?>" async></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
   <script>
     new WOW().init();
